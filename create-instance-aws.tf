@@ -7,9 +7,9 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami           = "ami-2d360152"
   instance_type = "t2.micro"
-  subnet_id     = "subnet-04bb594d08564838e"
+  subnet_id     = "${var.subnet_id}"
   key_name      = "cloud4erp"
-  security_groups = ["sg-0e7b0a2ec7264c2e5"]
+  security_groups = [""]
 
   tags {
      Name = "${var.name}"
